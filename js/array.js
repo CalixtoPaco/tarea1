@@ -27,3 +27,37 @@ jQuery(document).ready(function($) {
 	//console.log(datos);
 	console.log(datos);
 });*/
+
+
+
+//buscando un elemnto especifico en un array
+//una forma
+//este metodo devuelve verdadero si existe y si no falso
+var cadena2 = [ 'la', 'donna', 'e', 'mobile', 'cual', 'piuma', 'al', 'vento' ];
+console.info( cadena2.includes( 'paco' ) );
+
+//otra forma
+/*var inventario = [
+    {nombre: 'manzanas', cantidad: 2},
+    {nombre: 'bananas', cantidad: 0},
+    {nombre: 'cerezas', cantidad: 5}
+];
+
+function encontrar(fruta) { 
+    return fruta.nombre === 'bananas';
+}
+console.log(inventario.find(encontrar)); // { nombre: 'cerezas', cantidad: 5 }*/
+
+
+
+//eliminando un elemento especifico
+var cadena3 = [ 'manzana', 'uva', 'platano', 'pera' ];
+function remover(elemento, item ) {
+    var i = elemento.indexOf(item);
+    if (i !== -1) {
+    	elemento.splice( i, 1 );
+    }
+    
+}
+remover( cadena3, 'pera' );
+console.log( cadena3 );
